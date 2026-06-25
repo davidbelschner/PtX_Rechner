@@ -1,0 +1,12 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+*~
+.vscode/
+.idea/
+
+# Temporäre Exporte (werden im Browser erzeugt, nicht eingecheckt)
+*.pptx
+PtX_*_Projekt.json
+PtX_LCOH_*.pptx
+PtX_LCOE_*.pptx
