@@ -4,6 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>faktor2 Engineering | PtX-Systemrechner v1.30</title>
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#0AA2B8" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="PtX-Rechner" />
+<link rel="apple-touch-icon" href="icon-192.png" />
 
 <!-- ============================================================================
      OFFLINE-BIBLIOTHEKEN — vollständig eingebettet, keine externen Abrufe (v6).
@@ -5637,6 +5643,16 @@ function init(){
 }
 window.addEventListener('DOMContentLoaded',init);
 })();
+</script>
+<script>
+/* PWA: Service Worker registrieren (nur wenn über http/https geladen, nicht bei file://) */
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('service-worker.js').catch(function (e) {
+      console.warn('Service Worker konnte nicht registriert werden:', e);
+    });
+  });
+}
 </script>
 </body>
 </html>
